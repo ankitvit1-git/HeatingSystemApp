@@ -1,0 +1,27 @@
+{
+  "Configuration": {
+    "DatabaseName": "default",
+    "DatabasePassword": "",
+    "DatabaseType": "HSQLDB",
+    "DatabaseHost": "",
+    "DatabaseUserName": "",
+    "DatabaseUseIntegratedSecurity": "False",
+    "ApplicationRootUrl": "http://localhost:8080/",
+    "ScheduledEventExecution": "None"
+  },
+  "Constants": {
+    "HeatingSystem.OpenWeatherAPI": "https://api.openweathermap.org/data/2.5/weather?q=",
+    "HeatingSystem.AppKey": "&appid=ebd5afcbf1a8737a3ceb110b3a549ddb",
+    "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10",
+    "Email_Connector.LogNode": "Email_Connector",
+    "Email_Connector.azure_defaultConfig": "{\"authorization_endpoint\":\"https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize\",\"token_endpoint\":\"https://login.microsoftonline.com/organizations/oauth2/v2.0/token\",\"scopes_supported\":[\"openid\",\"profile\",\"email\",\"offline_access\",\"https://outlook.office.com/IMAP.AccessAsUser.All\",\"https://outlook.office.com/POP.AccessAsUser.All\",\"https://outlook.office.com/SMTP.Send\"]}",
+    "Email_Connector.EmailLogRetention": "30",
+    "Email_Connector.Email_Connector_Version": "5.7.0",
+    "Encryption.LogNode": "Encryption",
+    "Encryption.EncryptionPrefix": "{AES3}",
+    "Encryption.EncryptionKey": "12345678123456781234567812345678",
+    "Encryption.LegacyEncryptionKey": "",
+    "NanoflowCommons.Nanoflow_Commons_Version": "2.1.0"
+  },
+  "AdminPassword": "Demo@123"
+}

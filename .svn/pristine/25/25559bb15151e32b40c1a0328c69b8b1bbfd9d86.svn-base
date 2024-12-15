@@ -1,0 +1,17 @@
+  .card
+    {background-color:#0a1325;
+
+  padding: 56px 16px 16px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow .25s;
+};
+.iconstyle
+{
+color: white; padding-left: 70px; font-size: 50px;};
+
+.required label:after {
+    content:" *";
+    color: red;
+  }

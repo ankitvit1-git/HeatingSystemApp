@@ -1,0 +1,2 @@
+export const DataWidgets$Export_To_Excel = async () => (await import("C:/Users/Ankit/Documents/Mendix/HeatingSystem-main/javascriptsource/datawidgets/actions/Export_To_Excel")).Export_To_Excel;
+export const Email_Connector$JS_OpenSignInPage = async () => (await import("C:/Users/Ankit/Documents/Mendix/HeatingSystem-main/javascriptsource/email_connector/actions/JS_OpenSignInPage")).JS_OpenSignInPage;

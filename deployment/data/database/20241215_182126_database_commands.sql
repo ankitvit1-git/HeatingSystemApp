@@ -1,0 +1,9 @@
+ALTER TABLE "heatingsystem$servicerequest_technician" DROP CONSTRAINT "uniq_heatingsystem$servicerequest_technician_heatingsystem$servicerequestid";
+DROP INDEX "idx_heatingsystem$servicerequest_technician_administration$account_heatingsystem$servicerequest";
+ALTER TABLE "heatingsystem$servicerequest_technician" RENAME TO "heatingsystem$servicerequest_technicianaccount";
+CREATE INDEX "idx_heatingsystem$servicerequest_technicianaccount_administration$account_heatingsystem$servicerequest" ON "heatingsystem$servicerequest_technicianaccount" ("administration$accountid" ASC,"heatingsystem$servicerequestid" ASC);
+ALTER TABLE "heatingsystem$servicerequest_technicianaccount" ADD CONSTRAINT "uniq_heatingsystem$servicerequest_technicianaccount_heatingsystem$servicerequestid" UNIQUE ("heatingsystem$servicerequestid");
+DELETE FROM "mendixsystem$unique_constraint"  WHERE "name" = 'uniq_heatingsystem$servicerequest_technician_heatingsystem$servicerequestid' AND "column_id" = 'b82773e1-01de-311b-913b-a8dcef1e32b3';
+INSERT INTO "mendixsystem$unique_constraint" ("name", "table_id", "column_id") VALUES ('uniq_heatingsystem$servicerequest_technicianaccount_heatingsystem$servicerequestid', 'd48eebf9-cf49-4a5f-8678-9ec35062c843', 'b82773e1-01de-311b-913b-a8dcef1e32b3');
+UPDATE "mendixsystem$association" SET "association_name" = 'HeatingSystem.ServiceRequest_TechnicianAccount', "table_name" = 'heatingsystem$servicerequest_technicianaccount', "parent_entity_id" = 'ec292d5a-30d0-4532-985e-f76ba644e209', "child_entity_id" = 'c921ccbb-a670-48d9-833d-6a76c1406917', "parent_column_name" = 'heatingsystem$servicerequestid', "child_column_name" = 'administration$accountid', "pk_index_name" = NULL, "index_name" = 'idx_heatingsystem$servicerequest_technicianaccount_administration$account_heatingsystem$servicerequest' WHERE "id" = 'd48eebf9-cf49-4a5f-8678-9ec35062c843';
+UPDATE "mendixsystem$version" SET "versionnumber" = '4.2', "lastsyncdate" = '20241215 18:21:26';

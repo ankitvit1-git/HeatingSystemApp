@@ -1,0 +1,154 @@
+{
+  "DataBrokerConfiguration": {
+    "publishedServices": []
+  },
+  "RuntimeVersion": "9.24.16.27392",
+  "ProjectID": "1109ee0d-efec-4e2e-9625-dba1ea02374c",
+  "ProjectName": "HeatingSystem",
+  "ModelVersion": "unversioned",
+  "Description": "",
+  "AdminUser": "MxAdmin",
+  "Roles": {
+    "8dd52bfa-6d7e-453b-b506-303c0a3d9567": {
+      "Name": "Administrator",
+      "ManageableRoles": [
+        "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+        "d71b8d5a-5a9e-4d4e-a940-ab815ae30bf2",
+        "7d2955be-0fd4-4e13-935a-7ed577e3ebf7",
+        "3c352472-d063-4b92-bb56-bfdf8554ea63",
+        "d6a8d329-1b04-44a3-bd15-75f9043b4c6c"
+      ]
+    },
+    "d71b8d5a-5a9e-4d4e-a940-ab815ae30bf2": {
+      "Name": "Anonymous"
+    },
+    "7d2955be-0fd4-4e13-935a-7ed577e3ebf7": {
+      "Name": "CentralPlanning",
+      "ManageableRoles": [
+        "d6a8d329-1b04-44a3-bd15-75f9043b4c6c"
+      ]
+    },
+    "3c352472-d063-4b92-bb56-bfdf8554ea63": {
+      "Name": "Customer"
+    },
+    "d6a8d329-1b04-44a3-bd15-75f9043b4c6c": {
+      "Name": "Technician"
+    }
+  },
+  "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+  "Constants": [
+    {
+      "Name": "HeatingSystem.AppKey",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "&appid=ebd5afcbf1a8737a3ceb110b3a549ddb"
+    },
+    {
+      "Name": "HeatingSystem.OpenWeatherAPI",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "https://api.openweathermap.org/data/2.5/weather?q="
+    },
+    {
+      "Name": "CommunityCommons.MergeMultiplePdfs_MaxAtOnce",
+      "Type": "Integer",
+      "Description": "Restricted to 10 files at once for Mendix Cloud v4 compatibility. If you need to merge more than 10 files increase the number here. Setting the value to <=0 means unlimited.\r\n\r\nNote: We very strongly recommend to not increase the number for applications running in Mendix Cloud v4.",
+      "DefaultValue": "10"
+    },
+    {
+      "Name": "Email_Connector.azure_defaultConfig",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "{\"authorization_endpoint\":\"https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize\",\"token_endpoint\":\"https://login.microsoftonline.com/organizations/oauth2/v2.0/token\",\"scopes_supported\":[\"openid\",\"profile\",\"email\",\"offline_access\",\"https://outlook.office.com/IMAP.AccessAsUser.All\",\"https://outlook.office.com/POP.AccessAsUser.All\",\"https://outlook.office.com/SMTP.Send\"]}"
+    },
+    {
+      "Name": "Email_Connector.Email_Connector_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "5.7.0"
+    },
+    {
+      "Name": "Email_Connector.EmailLogRetention",
+      "Type": "Integer",
+      "Description": "The amount of days to preserve error messages.",
+      "DefaultValue": "30"
+    },
+    {
+      "Name": "Email_Connector.LogNode",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "Email_Connector"
+    },
+    {
+      "Name": "Encryption.EncryptionKey",
+      "Type": "String",
+      "Description": "This key will be used to encrypt and decrypt values.\r\nThe length of this key must be 32 characters.",
+      "DefaultValue": "12345678123456781234567812345678"
+    },
+    {
+      "Name": "Encryption.EncryptionPrefix",
+      "Type": "String",
+      "Description": "Prefix for stored encrypted values.\r\nThis value is used to determine whether the value has been already encrypted.\r\nThe prefix must be either {AES}, {AES2} or {AES3}.\r\nEncryption is only supported if the prefix is {AES3}.\r\nIt is not recommended to change this value.",
+      "DefaultValue": "{AES3}"
+    },
+    {
+      "Name": "Encryption.LegacyEncryptionKey",
+      "Type": "String",
+      "Description": "This key will be used to decrypt values that are encrypted with legacy algorithms.\r\nThe length of this key must be 16 characters.",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "Encryption.LogNode",
+      "Type": "String",
+      "Description": "Node which appears in log messages for this module.",
+      "DefaultValue": "Encryption"
+    },
+    {
+      "Name": "NanoflowCommons.Nanoflow_Commons_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "2.1.0"
+    }
+  ],
+  "ScheduledEvents": [],
+  "Languages": [
+    "en_US"
+  ],
+  "Configuration": {
+    "SourceDatabaseType": "HSQLDB",
+    "SourceDatabaseName": "default",
+    "SourceBuiltInDatabasePath": "model/sampledata/data/database"
+  },
+  "RequestHandlers": [
+    {
+      "Name": "/api/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/link/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/api-doc/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/mxecoh/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/rest-doc/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/p/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    }
+  ]
+}
